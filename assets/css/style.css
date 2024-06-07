@@ -1,0 +1,35 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.accordion-button {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #343a40; /* Dark grey */
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #343a40; /* Dark grey */
+  color: white;
+  padding: 1rem 0;
+}

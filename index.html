@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi CV</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Isaías Contreras</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobreMi">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencia">Experiencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#educacion">Educación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portafolio">portafolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <div class="accordion" id="cvAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button bg-dark text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#sobreMi"
+              aria-expanded="true"
+              aria-controls="sobreMi"
+            >
+              Sobre mí
+            </button>
+          </h2>
+          <div
+            id="sobreMi"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body">
+              <p>Descripción breve sobre ti.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed bg-dark text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#experiencia"
+              aria-expanded="false"
+              aria-controls="experiencia"
+            >
+              Experiencia
+            </button>
+          </h2>
+          <div
+            id="experiencia"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body">
+              <p>Detalles de tu experiencia laboral.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed bg-dark text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#educacion"
+              aria-expanded="false"
+              aria-controls="educacion"
+            >
+              Educación
+            </button>
+          </h2>
+          <div
+            id="educacion"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body">
+              <p>Detalles de tu educación.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed bg-dark text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#portafolio"
+              aria-expanded="false"
+              aria-controls="portafolio"
+            >
+              portafolio
+            </button>
+          </h2>
+          <div
+            id="portafolio"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body">
+              <p>Lista de tus portafolio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed bg-dark text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#contacto"
+              aria-expanded="false"
+              aria-controls="contacto"
+            >
+              Contacto
+            </button>
+          </h2>
+          <div
+            id="contacto"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body">
+              <p>Información de contacto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--No se Javascrypt, pero ChatGPT me ayudó para hacer funcionar los click en la nacbar -->
+      <!--También descubrí que si coloco esto en el head no funciona, así que lo dejé al final del codigo -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        // Function to handle the click on the navbar links and open the corresponding accordion section
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            const bsCollapse = new bootstrap.Collapse(target, {
+              toggle: false,
+            });
+            const allSections = document.querySelectorAll(
+              ".accordion-collapse"
+            );
+            allSections.forEach((section) => {
+              if (section !== target) {
+                const otherBsCollapse = new bootstrap.Collapse(section, {
+                  toggle: false,
+                });
+                otherBsCollapse.hide();
+              }
+            });
+            bsCollapse.show();
+          });
+        });
+      </script>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Mi Nombre. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
