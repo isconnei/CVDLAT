@@ -10,6 +10,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/9b1c535410.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -52,7 +56,7 @@
     <div class="container my-5">
       <div class="accordion" id="cvAccordion">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
+          <h2 class="accordion-header" id="Accordion-One">
             <button
               class="accordion-button bg-dark text-white"
               type="button"
@@ -67,16 +71,24 @@
           <div
             id="sobreMi"
             class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
+            aria-labelledby="Accordion-One"
             data-bs-parent="#cvAccordion"
           >
             <div class="accordion-body">
-              <p>Descripción breve sobre ti.</p>
+              <p>
+                Profesional con 7 años de experiencia, realizando proyectos TI
+                tanto con metodologías ágiles como con metodologías predictivas
+                y consultorías en el área de procesos y de inteligencia de
+                negocios. Le apasiona la gestión de proyectos y liderar equipos
+                de trabajo. Posee gran capacidad para trabajar con clientes. Es
+                una persona creativa que gusta de diseñar soluciones técnicas
+                robustas y escalable.
+              </p>
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
+          <h2 class="accordion-header" id="Accordion-Two">
             <button
               class="accordion-button collapsed bg-dark text-white"
               type="button"
@@ -91,16 +103,21 @@
           <div
             id="experiencia"
             class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="Accordion-Two"
             data-bs-parent="#cvAccordion"
           >
             <div class="accordion-body">
-              <p>Detalles de tu experiencia laboral.</p>
+              <ul>
+                <li>SENCE | Jefe de Proyectos 2021 - 2024</li>
+                <li>CONSULTOR INDEPENDIENTE 2020</li>
+                <li>BACKSPACE SPA | Jefe de Proyectos 2019 - 2020</li>
+                <li>BACKSPACE SPA| Consultor de Soluciones 2015 - 2019</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
+          <h2 class="accordion-header" id="Accordion-Three">
             <button
               class="accordion-button collapsed bg-dark text-white"
               type="button"
@@ -115,16 +132,25 @@
           <div
             id="educacion"
             class="accordion-collapse collapse"
-            aria-labelledby="headingThree"
+            aria-labelledby="Accordion-Three"
             data-bs-parent="#cvAccordion"
           >
             <div class="accordion-body">
-              <p>Detalles de tu educación.</p>
+              <ul>
+                <li>
+                  Ingeniero de Ejec. en Informática, Universidad Técnica
+                  Federico Santa María.
+                </li>
+                <li>
+                  Diplomado: “Herramientas para el liderazgo y gestión pública”,
+                  Universidad Católica de Chile
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
+          <h2 class="accordion-header" id="Accordion-Four">
             <button
               class="accordion-button collapsed bg-dark text-white"
               type="button"
@@ -133,22 +159,145 @@
               aria-expanded="false"
               aria-controls="portafolio"
             >
-              portafolio
+              Portafolio
             </button>
           </h2>
           <div
             id="portafolio"
             class="accordion-collapse collapse"
-            aria-labelledby="headingFour"
+            aria-labelledby="Accordion-Four"
             data-bs-parent="#cvAccordion"
           >
             <div class="accordion-body">
-              <p>Lista de tus portafolio.</p>
+              <div
+                id="carouselExampleDark"
+                class="carousel carousel-dark slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="4"
+                    aria-label="Slide 5"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img
+                      src="./assets/img/Desafio 1.png"
+                      class="d-block w-100"
+                      alt="Imagen del primer desafío"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-light">
+                      <h5>Mi primer CV en HTML</h5>
+                      <p>
+                        Corresponde al primer desafío de Desafío Latam. Es un CV
+                        en HTML con un link a un portafolio.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img
+                      src="./assets/img/Desafio 2.png"
+                      class="d-block w-100"
+                      alt="Imagen del segundo desafío"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-light">
+                      <h5>Alineando contenido</h5>
+                      <p>Primer acercamiento al uso de flexbox.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./assets/img/Desafio 3.png"
+                      class="d-block w-100"
+                      alt="Imagen de desafío 3"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-light">
+                      <h5>Iguana Pages</h5>
+                      <p>Desafío de alineación de contenidos.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./assets/img/Desafio 4.png"
+                      class="d-block w-100"
+                      alt="Imagen de desafío 4"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-light">
+                      <h5>Cuppon</h5>
+                      <p>Aprendiendo a usar Bootstrap</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./assets/img/Desafio 5.png"
+                      class="d-block w-100"
+                      alt="Imagen de desafío 5"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-light">
+                      <h5>Conociendo GIT</h5>
+                      <p>Desafío de uso de git y GitHub</p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFive">
+          <h2 class="accordion-header" id="Accordion-Five">
             <button
               class="accordion-button collapsed bg-dark text-white"
               type="button"
@@ -163,11 +312,28 @@
           <div
             id="contacto"
             class="accordion-collapse collapse"
-            aria-labelledby="headingFive"
+            aria-labelledby="Accordion-Five"
             data-bs-parent="#cvAccordion"
           >
             <div class="accordion-body">
-              <p>Información de contacto.</p>
+              <div class="container text-center">
+                <div class="row align-items-start">
+                  <div class="col-1">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="col-11 text-start">
+                    <p>+56 9 76767676</p>
+                  </div>
+                </div>
+                <div class="row align-items-start">
+                  <div class="col-1">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </div>
+                  <div class="col-11 text-start">
+                    <p>/in/icontrerasn</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
