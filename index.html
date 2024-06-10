@@ -330,7 +330,13 @@
                     <i class="fa-brands fa-linkedin"></i>
                   </div>
                   <div class="col-11 text-start">
-                    <p>/in/icontrerasn</p>
+                    <p>
+                      <a
+                        href="https://www.linkedin.com/in/icontrerasn/?originalSubdomain=cl"
+                        target="_blank"
+                        >/in/icontrerasn</a
+                      >
+                    </p>
                   </div>
                 </div>
               </div>
@@ -343,17 +349,17 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
       <script>
         // Function to handle the click on the navbar links and open the corresponding accordion section
-        document.querySelectorAll(".nav-link").forEach((link) => {
-          link.addEventListener("click", function (event) {
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', function (event) {
             event.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
+            const target = document.querySelector(this.getAttribute('href'));
             const bsCollapse = new bootstrap.Collapse(target, {
               toggle: false,
             });
             const allSections = document.querySelectorAll(
-              ".accordion-collapse"
+              '.accordion-collapse'
             );
-            allSections.forEach((section) => {
+            allSections.forEach(section => {
               if (section !== target) {
                 const otherBsCollapse = new bootstrap.Collapse(section, {
                   toggle: false,
